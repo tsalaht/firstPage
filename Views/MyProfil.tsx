@@ -115,7 +115,7 @@ export default function MyProfil() {
               <Edit size={16} color="#262B33" />
               <Text style={{ color: '#262B33', fontFamily: 'Almarai_Regular' }}>تعديل</Text>
             </View>
-
+            {/* need to inset shadow */}
             <View style={shadow.container}>
               <Text style={shadow.text}>الملف الشخصي</Text>
             </View>
