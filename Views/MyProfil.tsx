@@ -85,26 +85,11 @@ export default function MyProfil() {
 
   return (
     <View style={styles.viewContainer}>
-      <ImageBackground style={styles.background} source={require('../assets/plagin.png')}>
-        <View
-          style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-            backgroundColor: '#000000d9',
-          }}
-        ></View>
-           <View
-          style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-            backgroundColor: '#000000d9',
-          }}
-        ></View>
-
+      <ImageBackground style={styles.background} source={require('../assets/plagin.png')}
+      resizeMode='cover'
+      imageStyle={{
+        opacity:0.1
+      }}>
         <BlurView intensity={5} tint="dark" style={shadow.blurContainer}>
           <View
             style={{
