@@ -23,17 +23,22 @@ export default function App() {
 
 
   if (!fontsLoaded) {
-    return null; 
+    return null;
   }
 
   return (
     <Provider store={store}>
-    <FontContext.Provider value={fontsLoaded}>
-      <View style={styles.container}>
-        <StatusBar style="auto" />
-        <HonorablePeople/>
-      </View>
-    </FontContext.Provider>
+      <FontContext.Provider value={fontsLoaded}>
+        <View style={styles.container}>
+          <StatusBar style="auto" />
+          {/* <HonorablePeople/> */}
+          <MyProfil />
+          {/* <Community/> */}
+          {/* <Chat/> */}
+          {/* <Review/> */}
+          {/* <Distribution/> */}
+        </View>
+      </FontContext.Provider>
     </Provider>
   );
 }
