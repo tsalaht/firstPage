@@ -1,5 +1,5 @@
 export default {
-  almaraiBold: 'AlmaraiBold',
-  almaraiRegular: 'AlmaraiRegular',
-  almaraiLight: 'AlmaraiLight',
+  almaraiBold: 'Almarai_Bold',
+  almaraiRegular: 'Almarai_Regular',
+  almaraiLight: 'Almarai_Light',
 };

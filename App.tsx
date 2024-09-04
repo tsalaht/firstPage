@@ -3,9 +3,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import MyProfil from './Views/MyProfil';
 import { useFonts } from "expo-font";
-
-// Create a context for the fonts
+import Community from './Views/Community';
+import Chat from './Views/Chat';
+import HonorablePeople from './Views/HonorablePeople';
+import Review from './Views/Review';
+import Distribution from './Views/Distribution';
 const FontContext = createContext(false);
+import { Provider } from 'react-redux';
+import { store } from './Store/store';
 
 export const useFont = () => useContext(FontContext);
 
@@ -16,18 +21,20 @@ export default function App() {
     Almarai_Light: require('./assets/fonts/Almarai/Almarai-Light.ttf'),
   });
 
-  // Ensure fonts are loaded before rendering the app
+
   if (!fontsLoaded) {
-    return null; // or you can return a loading spinner here
+    return null; 
   }
 
   return (
+    <Provider store={store}>
     <FontContext.Provider value={fontsLoaded}>
       <View style={styles.container}>
         <StatusBar style="auto" />
-        <MyProfil />
+        <HonorablePeople/>
       </View>
     </FontContext.Provider>
+    </Provider>
   );
 }
 
