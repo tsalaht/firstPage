@@ -1,4 +1,4 @@
- export const svgs :any = [
+ export const svgs  = [
     {
 heart:`<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_2030_145)">

@@ -28,11 +28,12 @@ import noactive2 from "../assets/noactive2.png";
 import back from "../assets/back.png";
 import { SvgXml } from "react-native-svg";
 import { svgs } from "./svg";
+import LinearButton from "../Components/linearButton";
 export default function MyProfil() {
   const shadow = StyleSheet.create({
     container: {
       padding: 16,
-      backgroundColor: "#404040",
+      backgroundColor: Colors.NEUTRALS,
       borderRadius: 8,
       shadowColor: "#0000004D",
       shadowOffset: {
@@ -255,17 +256,19 @@ export default function MyProfil() {
                     marginBottom: 8,
                   }}
                 >
-                  <View style={shadow.smallOrangButton}>
-                    <Text
-                      style={{
-                        color: "white",
-                        ...shadow.fontBold,
-                        fontSize: 12,
-                      }}
-                    >
-                      شراء
-                    </Text>
-                  </View>
+                 <LinearButton
+                    text="شراء"
+                    onPress={() => {}}
+                    containerStyle={{
+                      width: 65,
+                      height: 28,
+                    }}
+                    linearStyle={{
+                      width: 65,
+                      height: 28,
+                      paddingVertical:0
+                    }}
+                  />
                   <Text style={shadow.title}>تصاميم الورق</Text>
                 </View>
 
