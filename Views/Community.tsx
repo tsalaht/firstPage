@@ -7,6 +7,7 @@ import {
   TextInput,
   ScrollView,
   Pressable,
+  Dimensions,
 } from "react-native";
 import styles from "./Styles/Index";
 import Colors from "../Colors";
@@ -32,6 +33,7 @@ import { setActiveComponent } from "../Store/navigationSlice";
 import { useDispatch } from 'react-redux';
 
 export default function Community() {
+  const { width, height } = Dimensions.get("window");
   const dispatch = useDispatch();
   const [type, setType] = useState("المتواجدون");
   const [selectedMonth, setSelectedMonth] = useState("الشهر الحالي");
@@ -319,7 +321,7 @@ export default function Community() {
 
         <View
           style={{
-            paddingHorizontal: 16,
+            paddingHorizontal: width * 0.04,
             marginTop: 8,
             flex: 1,
             overflow: "hidden",
