@@ -19,6 +19,24 @@ heart:`<svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http:/
 </svg>
 
 `,
+crown:`<svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_2029_52670)">
+<path d="M10.7371 20.9984H20.7361M15.4238 8.33257C15.4546 8.27659 15.4999 8.2299 15.5549 8.19738C15.6099 8.16486 15.6727 8.14771 15.7366 8.14771C15.8005 8.14771 15.8632 8.16486 15.9183 8.19738C15.9733 8.2299 16.0186 8.27659 16.0494 8.33257L18.1578 12.335C18.208 12.4277 18.2782 12.5081 18.3632 12.5704C18.4483 12.6328 18.5461 12.6755 18.6496 12.6956C18.7531 12.7157 18.8597 12.7126 18.9619 12.6865C19.0641 12.6605 19.1592 12.6122 19.2405 12.545L22.2952 9.92812C22.3538 9.88043 22.4261 9.85257 22.5016 9.84856C22.577 9.84455 22.6519 9.86459 22.7152 9.9058C22.7786 9.94701 22.8272 10.0073 22.8542 10.0779C22.8811 10.1485 22.885 10.2259 22.8651 10.2988L20.8411 17.6166C20.7997 17.7664 20.7107 17.8986 20.5875 17.9932C20.4643 18.0878 20.3136 18.1396 20.1583 18.1408H11.3156C11.1602 18.1398 11.0093 18.088 10.8859 17.9934C10.7626 17.8988 10.6735 17.7665 10.6321 17.6166L8.60875 10.2995C8.58893 10.2266 8.59276 10.1492 8.6197 10.0786C8.64664 10.008 8.6953 9.94773 8.75866 9.90652C8.82202 9.86531 8.89683 9.84526 8.97231 9.84928C9.04779 9.85329 9.12005 9.88114 9.17869 9.92884L12.2327 12.5457C12.3139 12.6129 12.4091 12.6612 12.5112 12.6873C12.6134 12.7133 12.7201 12.7164 12.8236 12.6963C12.9271 12.6762 13.0249 12.6335 13.1099 12.5712C13.195 12.5088 13.2651 12.4284 13.3154 12.3357L15.4238 8.33257Z" stroke="#FFCF0B" stroke-width="1.42842" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_2029_52670" x="0.81132" y="0.362773" width="29.8512" height="28.4206" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="3.53535"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.952941 0 0 0 0 0.788235 0 0 0 0 0.113725 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2029_52670"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2029_52670" result="shape"/>
+</filter>
+</defs>
+</svg>
+`,
 win:`<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_2029_47191)">
 <path d="M6.605 10.945L6 15.5L8.5 14L11 15.5L10.395 10.94M12 8C12 9.933 10.433 11.5 8.5 11.5C6.567 11.5 5 9.933 5 8C5 6.067 6.567 4.5 8.5 4.5C10.433 4.5 12 6.067 12 8Z" stroke="#FFAD0D" stroke-width="1.04167" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
