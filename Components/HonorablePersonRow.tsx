@@ -1,10 +1,17 @@
 import React from "react";
 import { View, Text, Image,StyleSheet } from "react-native";
 import { SvgXml } from "react-native-svg";
-import { Crown1, Diamonds, Gift } from "iconsax-react-native";
+import {  Diamonds, Gift } from "iconsax-react-native";
 import Colors from "../Colors";
 import fonts from "../fonts";
-export default function HonorablePersonRow({ name, photo, giftValue, giftCount, svgIcon }:any) {
+import { svgs } from "../Views/svg";
+export default function HonorablePersonRow({ name, photo, giftValue, giftCount, svgIcon }:{
+  name: string;
+  photo?: string;
+  giftValue: number;
+  giftCount: number;
+  svgIcon: string;
+}) {
   const styles = StyleSheet.create({
     rankRow: {
       width: '100%',
@@ -71,7 +78,7 @@ export default function HonorablePersonRow({ name, photo, giftValue, giftCount, 
         <View style={styles.nameContainer}>
           <View style={{ flexDirection: 'row', gap: 4, alignItems: 'center' }}>
             <Text style={styles.nameText}>{name}</Text>
-            <Crown1 size="16" color="#FFCF0B" />
+            <SvgXml xml={svgs[0].crown} />
           </View>
           <SvgXml xml={svgIcon} />
         </View>

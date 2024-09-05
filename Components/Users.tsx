@@ -8,6 +8,7 @@ import { BlurView } from "expo-blur";
 import { User, Crown1, Profile2User, Message2 } from "iconsax-react-native";
 import Mix from "./Mix";
 const Users = () => {
+  const arr = React.useMemo<number[]>(() => new Array(10).fill(2), []);
   return (
     <View style={{width:'100%',flex:1}}>
 <View style={styles.container}>
@@ -64,35 +65,14 @@ const Users = () => {
       <Mix />
     </View>
     <View style={{width:'100%',marginTop:24, overflow:'visible', position: "relative",marginBottom:80}}>
-<ScrollView  showsVerticalScrollIndicator={false} style={{marginBottom:10}}>
-  <View style={{flexDirection:'column',gap:12}}>
-  <View style={{flexDirection:'row',width:'100%',gap:8, position: "relative",overflow:'visible',paddingTop:8}}>
-<Mix/>
-<Mix/>
-<Mix/>
-  </View>
-  <View style={{flexDirection:'row',width:'100%',gap:8, position: "relative",overflow:'visible'}}>
-<Mix/>
-<Mix/>
-<Mix/>
-  </View>
-  <View style={{flexDirection:'row',width:'100%',gap:8, position: "relative",overflow:'visible'}}>
-<Mix/>
-<Mix/>
-<Mix/>
-  </View>
-  <View style={{flexDirection:'row',width:'100%',gap:8, position: "relative",overflow:'visible'}}>
-<Mix/>
-<Mix/>
-<Mix/>
-  </View>
-  <View style={{flexDirection:'row',width:'100%',gap:8, position: "relative",overflow:'visible'}}>
-<Mix/>
-<Mix/>
-<Mix/>
-  </View>
-
-
+<ScrollView  showsVerticalScrollIndicator={false} style={{marginBottom:10, height:'100%' }}>
+  <View style={{flexWrap :'wrap',flexDirection:'row',
+    justifyContent:'flex-end',
+    alignItems:'center',
+    gap:12}}>
+      {arr.map((_, index) => (
+        <Mix key={index}/>
+      ))}
 
   </View>
 

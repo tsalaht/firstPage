@@ -1,25 +1,33 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, ViewStyle, Dimensions } from "react-native";
 import Colors from "../Colors";
 import fonts from "../fonts";
 import { SvgXml } from "react-native-svg";
 import { svgs } from "../Views/svg";
 import { BlurView } from "expo-blur";
 import { User, Crown1, Profile2User, Message2 } from "iconsax-react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
-const Mix = () => {
+const Mix = ({linearStyle}:{linearStyle?:ViewStyle}) => {
+  const { width, height } = Dimensions.get("window");
   return (
     // Layer Blur messing
-    <View
-      style={{
-        backgroundColor: Colors.BACKGROUND_4,
-        borderRadius: 24,
-        flexDirection: "column",
-        width: 115,
-      }}
-    >
+    <LinearGradient 
+    start={{ x: 0.5, y: 0.589 }}
+    end={{ x: 0.5, y: 1.2877 }}
+     style={[{
+      backgroundColor: Colors.BACKGROUND_4,
+      borderRadius: 24,
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      width:width * 0.285,
+      height:height * 0.078,
+     },linearStyle]}
+     
+     colors={['#4D5666','#EFB054']}>
       <View style={{ flexDirection: "row-reverse", width: "100%" }}>
-        <View style={{ position: "relative", top: -5 }}>
+        <View style={{ position: "relative", top: -5 , }}>
           <View style={{}}>
             <SvgXml xml={svgs[0].profile} style={{width:10,height:10}}/>
           </View>
@@ -77,9 +85,10 @@ const Mix = () => {
           gap: 4,
           flexDirection: "row",
           paddingVertical: 2,
-          shadowColor: "#FFCF0B",
-          shadowOpacity: 0.8,
-          shadowRadius: 1,
+          shadowColor: Colors.DEFAULT_BLACK,
+          shadowOpacity: 0.25,
+          shadowRadius: 6.16,
+          shadowOffset: { width: 0, height: 4.74 },
           elevation: 5,
           position: "absolute",
           bottom: 0,
@@ -106,7 +115,7 @@ const Mix = () => {
           <Crown1 size="10" color="#FFCF0B" />
         </View>
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 
