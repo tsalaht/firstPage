@@ -11,6 +11,8 @@ import { ArrowRight2, Gift, Diamonds } from "iconsax-react-native";
 import styles from "./Styles/Index";
 import Colors from "../Colors";
 import fonts from "../fonts";
+import { icons } from "./icons";
+import { SvgXml } from "react-native-svg";
 
 export default function Distribution() {
   const [giftCount, setGiftCount] = useState("");
@@ -19,7 +21,7 @@ export default function Distribution() {
   const shadow = StyleSheet.create({
     container: {
       padding: 16,
-      backgroundColor: "#404040",
+      backgroundColor: Colors.NEUTRALS,
       borderRadius: 8,
       shadowColor: "#0000004D",
       shadowOffset: {
@@ -31,13 +33,13 @@ export default function Distribution() {
       elevation: 10,
     },
     text: {
-      color: "#EFB054",
+      color: Colors.PRIMARY_600,
       fontFamily: fonts.almaraiRegular,
     },
     blurContainer: {
       width: "100%",
       overflow: "hidden",
-      backgroundColor: "#262b3384",
+      backgroundColor: Colors.BACKGROUND_3,
       alignItems: "center",
       justifyContent: "center",
       borderBottomEndRadius: 24,
@@ -157,16 +159,19 @@ export default function Distribution() {
               <View
                 style={{
                   flexDirection: "row",
-                  backgroundColor: "#4D5666",
+                  backgroundColor: Colors.BACKGROUND_5,
                   borderRadius: 16,
                   alignItems: "center",
                   padding: 12,
                   gap: 4,
                 }}
               >
-                <Diamonds size="16" color="#B9F2FF" variant="Bold" />
+                <SvgXml xml={icons[0].diamond2} />
                 <Text
-                  style={{ color: "#fff", fontFamily: fonts.almaraiRegular }}
+                  style={{
+                    color: Colors.DEFAULT_WHITE,
+                    fontFamily: fonts.almaraiRegular,
+                  }}
                 >
                   1478
                 </Text>
@@ -178,7 +183,7 @@ export default function Distribution() {
               <View
                 style={{
                   flexDirection: "row",
-                  backgroundColor: "#4D5666",
+                  backgroundColor: Colors.BACKGROUND_5,
                   borderRadius: 16,
                   alignItems: "center",
                   paddingVertical: 12,
@@ -187,11 +192,14 @@ export default function Distribution() {
                 }}
               >
                 <Text
-                  style={{ color: "#262B33", fontFamily: fonts.almaraiRegular }}
+                  style={{
+                    color: Colors.BACKGROUND_3,
+                    fontFamily: fonts.almaraiRegular,
+                  }}
                 >
                   عودة
                 </Text>
-                <ArrowRight2 size={16} color="#262B33" />
+                <ArrowRight2 size={16} color={Colors.BACKGROUND_3} />
               </View>
             </View>
           </View>
@@ -219,7 +227,7 @@ export default function Distribution() {
                   >
                     عدد الهدايا
                   </Text>
-                  <Gift size="16" color="#EB6F70" />
+                  <SvgXml xml={icons[0].gift2} />
                 </View>
                 <View style={shadow.giftInput}>
                   <TextInput
@@ -246,7 +254,7 @@ export default function Distribution() {
                   >
                     قيمة الهدية
                   </Text>
-                  <Diamonds size="16" color="#B9F2FF" variant="Bold" />
+                  <SvgXml xml={icons[0].diamond2} />
                 </View>
                 <View style={shadow.giftInput}>
                   <TextInput

@@ -78,7 +78,7 @@ export default function Community() {
               >
                 <Text
                   style={{
-                    color: "#fff",
+                    color: Colors.DEFAULT_WHITE,
                     fontFamily: fonts.almaraiBold,
                     fontSize: 15,
                   }}
@@ -90,7 +90,7 @@ export default function Community() {
                     width: 6,
                     height: 6,
                     borderRadius: 50,
-                    backgroundColor: "#47B881",
+                    backgroundColor: Colors.SUCCESS_600,
                   }}
                 ></View>
               </View>
@@ -114,7 +114,7 @@ export default function Community() {
             <View
               style={{
                 width: "100%",
-                backgroundColor: "#4D5666",
+                backgroundColor: Colors.BACKGROUND_5,
                 padding: 8,
                 zIndex: 8,
                 marginTop: 8,
@@ -167,7 +167,7 @@ export default function Community() {
             <View
               style={{
                 width: "100%",
-                backgroundColor: "#4D5666",
+                backgroundColor: Colors.BACKGROUND_5,
                 padding: 8,
                 zIndex: 8,
                 marginTop: 8,
@@ -239,7 +239,7 @@ export default function Community() {
     // inside shadow
     container: {
       padding: 16,
-      backgroundColor: "#404040",
+      backgroundColor: Colors.NEUTRALS,
       borderRadius: 8,
       shadowColor: "#0000004D",
       marginLeft: 45,
@@ -252,13 +252,13 @@ export default function Community() {
       elevation: 10,
     },
     text: {
-      color: "#EFB054",
+      color: Colors.PRIMARY_600,
       fontFamily: fonts.almaraiRegular,
     },
     blurContainer: {
       width: "100%",
       overflow: "hidden",
-      backgroundColor: "#262b3384",
+      backgroundColor: Colors.BACKGROUND_3,
       alignItems: "center",
       justifyContent: "center",
       borderBottomEndRadius: 24,
@@ -267,7 +267,7 @@ export default function Community() {
     blurContainer2: {
       width: "100%",
       overflow: "hidden",
-      backgroundColor: "#262b3384",
+      backgroundColor: Colors.BACKGROUND_3,
       alignItems: "center",
       justifyContent: "center",
       borderTopEndRadius: 24,
@@ -304,17 +304,17 @@ export default function Community() {
             <View
               style={{
                 flexDirection: "row",
-                backgroundColor: "#4D5666",
+                backgroundColor: Colors.BACKGROUND_5,
                 borderRadius: 16,
                 alignItems: "center",
                 padding: 12,
                 gap: 4,
               }}
             >
-              <Text style={{ color: "#262B33", fontFamily: "Almarai_Regular" }}>
+              <Text style={{ color: Colors.BACKGROUND_3, fontFamily: "Almarai_Regular" }}>
                 عودة
               </Text>
-              <ArrowRight2 size={16} color="#262B33" />
+              <ArrowRight2 size={16} color={Colors.BACKGROUND_3} />
             </View>
           </View>
         </BlurView>
@@ -330,7 +330,7 @@ export default function Community() {
           <View
             style={{
               width: "100%",
-              backgroundColor: "#4D5666",
+              backgroundColor: Colors.BACKGROUND_5,
               padding: 8,
               zIndex: 8,
               marginTop: 8,
@@ -502,20 +502,20 @@ const styl = StyleSheet.create({
     borderColor: "transparent",
     paddingVertical: 8,
     width: 104,
-    backgroundColor: "#39404D",
+    backgroundColor: Colors.BACKGROUND_4,
     borderRadius: 28,
     justifyContent: "center",
     alignItems: "center",
   },
   selectedTab: {
-    backgroundColor: "#EFB054",
+    backgroundColor: Colors.PRIMARY_600,
   },
   tabText: {
     color: "white",
     fontFamily: "Almarai_Regular",
   },
   selectedTabText: {
-    color: "#fff",
+    color:Colors.DEFAULT_WHITE,
   },
   bottmRaduse: {
     borderTopEndRadius: 24,
@@ -549,7 +549,7 @@ const styl = StyleSheet.create({
     borderColor: "transparent",
     paddingVertical: 8,
     width: 159.5,
-    backgroundColor: "#39404D",
+    backgroundColor: Colors.BACKGROUND_4,
     borderRadius: 28,
     justifyContent: "center",
     alignItems: "center",

@@ -3,6 +3,7 @@ import { View, Text, Image,StyleSheet } from "react-native";
 import { SvgXml } from "react-native-svg";
 import {  Diamonds, Gift } from "iconsax-react-native";
 import Colors from "../Colors";
+import { icons } from "../Views/icons";
 import fonts from "../fonts";
 import { svgs } from "../Views/svg";
 export default function HonorablePersonRow({ name, photo, giftValue, giftCount, svgIcon }:{
@@ -63,13 +64,13 @@ export default function HonorablePersonRow({ name, photo, giftValue, giftCount, 
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 42 }}>
         <View style={styles.pointsContainer}>
           <View style={styles.pointsTextContainer}>
-            <Diamonds size="14" color="#42C8E7" variant="Bold" />
+          <SvgXml xml={icons[0].diamond}/>
             <Text style={styles.pointsText}>{giftValue}</Text>
           </View>
         </View>
         <View style={styles.pointsContainer}>
           <View style={styles.pointsTextContainer}>
-            <Gift size="12" color="#EC2D30" />
+          <SvgXml xml={icons[0].giftr}/>
             <Text style={styles.pointsText}>{giftCount}</Text>
           </View>
         </View>

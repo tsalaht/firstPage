@@ -6,6 +6,7 @@ import { SvgXml } from "react-native-svg";
 import { svgs } from '../Views/svg';
 import { Star1 } from "iconsax-react-native";
 import RankRow from './RankRow';
+import { icons } from '../Views/icons';
 
 const Champions = () => {
   const [type, setType] = useState("البلاتينية");
@@ -42,7 +43,7 @@ const Champions = () => {
             <View style={styles.pointsContainer}>
               <View style={styles.pointsTextContainer}>
                 <Text style={styles.pointsText}>0</Text>
-                <Star1 size="14" color="#DC9F46" />
+                <SvgXml xml={icons[0].staro}/>
               </View>
             </View>
             <View style={styles.nameRankContainer}>
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     borderColor: "transparent",
     paddingVertical: 8,
     width: 86,
-    backgroundColor: "#39404D",
+    backgroundColor: Colors.BACKGROUND_4,
     borderRadius: 28,
     justifyContent: "center",
     alignItems: "center",
@@ -145,9 +146,9 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.BACKGROUND_5,
   },
   pointsContainer: {
-    width: 80.5,
+    width: 85.5,
     borderRadius: 13.5,
-    paddingVertical: 5,
+    paddingVertical: 2,
     flexDirection: 'row-reverse',
     shadowColor: "black",
     shadowOpacity: 0.8,
@@ -155,7 +156,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     elevation: 6,
     backgroundColor: Colors.BACKGROUND_5,
-    paddingRight: 13,
+    paddingRight: 4,
   },
   pointsTextContainer: {
     flexDirection: 'row',

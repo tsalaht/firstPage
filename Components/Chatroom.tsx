@@ -93,7 +93,7 @@ saad14
 </View>
 <View style={styles.messageContent2}>
 <View style={{backgroundColor:Colors.BACKGROUND_3,padding:8,borderTopEndRadius:8,borderTopStartRadius:8,borderBottomStartRadius:8}}>
-<Text style={{fontFamily:fonts.almaraiRegular,fontSize:12,color:'#EFB054',borderTopEndRadius:8}}>
+<Text style={{fontFamily:fonts.almaraiRegular,fontSize:12,color:Colors.PRIMARY_600,borderTopEndRadius:8}}>
 السلام عليكم ورحمة الله وبركاته
 </Text>
 </View>

@@ -3,26 +3,44 @@ import { StyleSheet, View, Text, ScrollView } from "react-native";
 import Colors from "../Colors";
 import fonts from "../fonts";
 import { SvgXml } from "react-native-svg";
-import { svgs } from "../Views/svg";
-import { BlurView } from "expo-blur";
-import { User, Crown1, Profile2User, Message2 } from "iconsax-react-native";
+import { icons } from "../Views/icons";
 import Mix from "./Mix";
+import LinearButton from "./linearButton";
+
 const Users = () => {
   const arr = React.useMemo<number[]>(() => new Array(10).fill(2), []);
   return (
     <View style={{width:'100%',flex:1}}>
 <View style={styles.container}>
       <View style={styles.container2}>
-        <View style={styles.button1}>
+        <View style={{marginTop:6}}>
+        <LinearButton
+                    text="الاصدقاء"
+                    textStyles={{fontSize:12,fontFamily:fonts.almaraiBold}}
+                    onPress={() => {}}
+                    containerStyle={{
+                      width: 81,
+                      height: 26,
+                    }}
+                    linearStyle={{
+                      width: 81,
+                      height: 26,
+                      paddingVertical:0
+                    }}
+                  />
+        </View>
+   
+        <View style={styles.iconContainer}>
           <Text
             style={{
-              fontFamily: fonts.almaraiBold,
+              fontFamily: fonts.almaraiRegular,
               color: "white",
-              fontSize: 12,
+              fontSize: 14,
             }}
           >
-            الاصدقاء
+            0
           </Text>
+          <SvgXml xml={icons[0].twoUser}/>
         </View>
         <View style={styles.iconContainer}>
           <Text
@@ -34,7 +52,7 @@ const Users = () => {
           >
             0
           </Text>
-          <Profile2User size="16" color="#DC9F46" />
+          <SvgXml xml={icons[0].oneUser}/>
         </View>
         <View style={styles.iconContainer}>
           <Text
@@ -46,19 +64,7 @@ const Users = () => {
           >
             0
           </Text>
-          <User size="16" color="#DC9F46" />
-        </View>
-        <View style={styles.iconContainer}>
-          <Text
-            style={{
-              fontFamily: fonts.almaraiRegular,
-              color: "white",
-              fontSize: 14,
-            }}
-          >
-            0
-          </Text>
-          <Message2 size="16" color="#DC9F46" />
+          <SvgXml xml={icons[0].chat}/>
         </View>
       </View>
 
@@ -69,6 +75,7 @@ const Users = () => {
   <View style={{flexWrap :'wrap',flexDirection:'row',
     justifyContent:'flex-end',
     alignItems:'center',
+    paddingTop:10,
     gap:12}}>
       {arr.map((_, index) => (
         <Mix key={index}/>

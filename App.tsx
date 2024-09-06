@@ -1,26 +1,25 @@
-import React, { createContext, useContext } from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import MyProfil from './Views/MyProfil';
+import React, { createContext, useContext } from "react";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import MyProfil from "./Views/MyProfil";
 import { useFonts } from "expo-font";
-import Community from './Views/Community';
-import Chat from './Views/Chat';
-import HonorablePeople from './Views/HonorablePeople';
-import Review from './Views/Review';
-import Distribution from './Views/Distribution';
+import Community from "./Views/Community";
+import Chat from "./Views/Chat";
+import HonorablePeople from "./Views/HonorablePeople";
+import Review from "./Views/Review";
+import Distribution from "./Views/Distribution";
 const FontContext = createContext(false);
-import { Provider } from 'react-redux';
-import { store } from './Store/store';
+import { Provider } from "react-redux";
+import { store } from "./Store/store";
 
 export const useFont = () => useContext(FontContext);
 
 export default function App() {
   let [fontsLoaded] = useFonts({
-    Almarai_Regular: require('./assets/fonts/Almarai/Almarai-Regular.ttf'),
-    Almarai_Bold: require('./assets/fonts/Almarai/Almarai-Bold.ttf'),
-    Almarai_Light: require('./assets/fonts/Almarai/Almarai-Light.ttf'),
+    Almarai_Regular: require("./assets/fonts/Almarai/Almarai-Regular.ttf"),
+    Almarai_Bold: require("./assets/fonts/Almarai/Almarai-Bold.ttf"),
+    Almarai_Light: require("./assets/fonts/Almarai/Almarai-Light.ttf"),
   });
-
 
   if (!fontsLoaded) {
     return null;
@@ -32,11 +31,11 @@ export default function App() {
         <View style={styles.container}>
           <StatusBar style="auto" />
           {/* <HonorablePeople/> */}
-          <MyProfil />
-          {/* <Community/> */}
+          {/* <MyProfil /> */}
+          <Community/>
           {/* <Chat/> */}
           {/* <Review/> */}
-          {/* <Distribution/> */}
+          {/* <Distribution /> */}
         </View>
       </FontContext.Provider>
     </Provider>
@@ -46,6 +45,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });

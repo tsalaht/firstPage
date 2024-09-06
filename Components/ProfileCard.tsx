@@ -3,7 +3,16 @@ import { View, Text, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SvgXml } from 'react-native-svg';
 import { Crown1, Gift } from 'iconsax-react-native';
-
+import { icons } from '../Views/icons';
+import Colors from '../Colors';
+interface ProfileCardProps {
+  gradientColors?: string[];
+  profileSvg: string;
+  badgeSvg: string;
+  smallCardSvg: string;
+  name?: string;
+  giftCount?: string;
+}
 export default function ProfileCard({
   gradientColors = ["#C2E8FD", "#67E0AC", "#138B57", "#C2E8FD"],
   profileSvg,
@@ -11,7 +20,7 @@ export default function ProfileCard({
   smallCardSvg,
   name = "Saad14",
   giftCount = "152 ألفاً",
-}:any) {
+}:ProfileCardProps) {
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -35,7 +44,7 @@ export default function ProfileCard({
         <Crown1 size="12" color="#FFCF0B" />
       </View>
       <View style={styles.giftContainer}>
-        <Gift size="12" color="#EC2D30" />
+      <SvgXml xml={icons[0].giftr}/>
         <Text style={styles.giftText}>{giftCount}</Text>
       </View>
     </View>
@@ -56,7 +65,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   iconContainer: {
-    backgroundColor: '#262B33',
+    backgroundColor: Colors.BACKGROUND_3,
     borderRadius: 100,
     position: 'relative',
   },

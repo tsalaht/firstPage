@@ -25,7 +25,7 @@ const Mix = ({linearStyle}:{linearStyle?:ViewStyle}) => {
       height:height * 0.078,
      },linearStyle]}
      
-     colors={['#4D5666','#EFB054']}>
+     colors={[Colors.BACKGROUND_5,Colors.PRIMARY_600,]}>
       <View style={{ flexDirection: "row-reverse", width: "100%" }}>
         <View style={{ position: "relative", top: -5 , }}>
           <View style={{}}>
@@ -47,15 +47,15 @@ const Mix = ({linearStyle}:{linearStyle?:ViewStyle}) => {
               alignItems: "center",
               position: "absolute",
               top: 18,
-              right: 15,
+              right: 8,
               width: "100%",
             }}
           >
             <Text
               style={{
                 fontFamily: fonts.almaraiBold,
-                color: "#DC9F46",
-                fontSize: 12.29,
+                color: Colors.PRIMARY_700,
+                fontSize: 10.29,
                 textShadowColor: "#FFCF0B",
                 textShadowOffset: { width: -1, height: 1 },
                 textShadowRadius: 1,
@@ -66,7 +66,7 @@ const Mix = ({linearStyle}:{linearStyle?:ViewStyle}) => {
             <Text
               style={{
                 fontFamily: fonts.almaraiBold,
-                color: "#fff",
+                color: Colors.DEFAULT_WHITE,
                 fontSize: 9.43,
               }}
             >
@@ -97,7 +97,7 @@ const Mix = ({linearStyle}:{linearStyle?:ViewStyle}) => {
         <Text
           style={{
             fontFamily: fonts.almaraiBold,
-            color: "#fff",
+            color: Colors.DEFAULT_WHITE,
             fontSize: 7.11,
           }}
         >
@@ -105,7 +105,7 @@ const Mix = ({linearStyle}:{linearStyle?:ViewStyle}) => {
         </Text>
         <View
           style={{
-            shadowColor: "#4D5666",
+            shadowColor:Colors.BACKGROUND_5,
             shadowOffset: { width: 1, height: 2 },
             shadowOpacity: 0.8,
             shadowRadius: 1,

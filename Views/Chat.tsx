@@ -16,7 +16,8 @@ import { svgs } from "./svg";
 import styles from "./Styles/Index";
 import Colors from "../Colors";
 import fonts from "../fonts";
-
+import { icons } from "./icons";
+import LinearGradient from "react-native-svg";
 export default function Chat() {
   const bottomSheetRef = useRef<any>(null);
 
@@ -27,7 +28,7 @@ export default function Chat() {
   const shadow = StyleSheet.create({
     container: {
       padding: 16,
-      backgroundColor: "#404040",
+      backgroundColor: Colors.NEUTRALS,
       borderRadius: 8,
       shadowColor: "#0000004D",
       shadowOffset: {
@@ -39,13 +40,13 @@ export default function Chat() {
       elevation: 10,
     },
     text: {
-      color: "#EFB054",
+      color:Colors.PRIMARY_600,
       fontFamily: fonts.almaraiRegular,
     },
     blurContainer: {
       width: "100%",
       overflow: "hidden",
-      backgroundColor: "#262b3384",
+      backgroundColor: Colors.BACKGROUND_3,
       alignItems: "center",
       justifyContent: "center",
       borderBottomEndRadius: 24,
@@ -72,14 +73,14 @@ export default function Chat() {
       justifyContent: "center",
     },
     iconContainer: {
-      backgroundColor: "#262B33",
+      backgroundColor:Colors.BACKGROUND_3,
       borderRadius: 100,
       position: "relative",
     },
     blurContainer2: {
       width: "100%",
       overflow: "hidden",
-      backgroundColor: "#262b3384",
+      backgroundColor: Colors.BACKGROUND_3,
       alignItems: "center",
       justifyContent: "center",
       borderTopEndRadius: 24,
@@ -140,7 +141,7 @@ export default function Chat() {
               <View
                 style={{
                   flexDirection: "row",
-                  backgroundColor: "#4D5666",
+                  backgroundColor:Colors.BACKGROUND_5,
                   borderRadius: 16,
                   alignItems: "center",
                   padding: 12,
@@ -149,7 +150,7 @@ export default function Chat() {
               >
                 <SvgXml xml={svgs[0].rocket} />
                 <Text
-                  style={{ color: "#262B33", fontFamily: "Almarai_Regular" }}
+                  style={{ color:Colors.BACKGROUND_3, fontFamily: "Almarai_Regular" }}
                 >
                   قائمة الكرام
                 </Text>
@@ -161,7 +162,7 @@ export default function Chat() {
               <View
                 style={{
                   flexDirection: "row",
-                  backgroundColor: "#4D5666",
+                  backgroundColor: Colors.BACKGROUND_5,
                   borderRadius: 16,
                   alignItems: "center",
                   paddingVertical: 12,
@@ -170,11 +171,11 @@ export default function Chat() {
                 }}
               >
                 <Text
-                  style={{ color: "#262B33", fontFamily: "Almarai_Regular" }}
+                  style={{ color: Colors.BACKGROUND_3, fontFamily: "Almarai_Regular" }}
                 >
                   عودة
                 </Text>
-                <ArrowRight2 size={16} color="#262B33" />
+                <ArrowRight2 size={16} color={Colors.BACKGROUND_3} />
               </View>
             </View>
             <View style={shadow.imageContainer}>
@@ -242,13 +243,13 @@ export default function Chat() {
                 <Text
                   style={{
                     fontFamily: fonts.almaraiBold,
-                    color: "#fff",
+                    color: Colors.DEFAULT_WHITE,
                     fontSize: 12,
                   }}
                 >
                   إهداء
                 </Text>
-                <Gift size="16" color="#FFFF" />
+                <SvgXml xml={icons[0].giftw}/>
               </View>
             </View>
           </View>

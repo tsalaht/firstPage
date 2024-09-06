@@ -6,8 +6,13 @@ import { Crown1 } from "iconsax-react-native";
 import Colors from "../Colors";
 import fonts from "../fonts";
 
-
-const Scors = ({ gradientColors, name, badgeIcon, gropCardIcon }:any) => {
+type ScorsProps = {
+  gradientColors: string[]; 
+  name: string;
+  badgeIcon: string;
+  gropCardIcon: string; 
+};
+const Scors = ({ gradientColors, name, badgeIcon, gropCardIcon }:ScorsProps) => {
   return (
     <LinearGradient colors={gradientColors} style={styles.gradientBorder}>
       <View style={styles.innerView}>
@@ -58,11 +63,11 @@ const styles = StyleSheet.create({
   },
   nameText: {
     fontFamily: fonts.almaraiBold,
-    color: '#fff',
+    color: Colors.DEFAULT_WHITE,
     fontSize: 7.11,
   },
   crownContainer: {
-    shadowColor: '#4D5666',
+    shadowColor: Colors.BACKGROUND_5,
     shadowOffset: { width: 1, height: 2 },
     shadowOpacity: 0.8,
     shadowRadius: 1,

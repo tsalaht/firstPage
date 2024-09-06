@@ -7,8 +7,8 @@ import { svgs } from '../Views/svg';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 import { Crown1,Star1} from "iconsax-react-native";
 import Scors from './Scors';
-import RankRow from './RankRow';
 import RankRow2 from './RankRow2';
+import { icons } from '../Views/icons';
 
 const Leaderboard = () => {
     return (
@@ -20,8 +20,8 @@ const Leaderboard = () => {
               size={75}
               width={10}
               fill={25}
-              tintColor="#5493EF"
-              backgroundColor="#262B33"
+              tintColor={Colors.SECONDARY_600}
+              backgroundColor={Colors.BACKGROUND_3}
               rotation={360}
               duration={500}
             >
@@ -69,7 +69,7 @@ const Leaderboard = () => {
         <Text
           style={{
             fontFamily: fonts.almaraiBold,
-            color: "#fff",
+            color:Colors.DEFAULT_WHITE,
             fontSize: 7.11,
           }}
         >
@@ -77,7 +77,7 @@ const Leaderboard = () => {
         </Text>
         <View
           style={{
-            shadowColor: "#4D5666",
+            shadowColor: Colors.BACKGROUND_5,
             shadowOffset: { width: 1, height: 2 },
             shadowOpacity: 0.8,
             shadowRadius: 1,
@@ -92,7 +92,7 @@ const Leaderboard = () => {
             <View style={styles.container3}>
 <Text     style={{
             fontFamily: fonts.almaraiBold,
-            color: "#fff",
+            color: Colors.DEFAULT_WHITE,
             fontSize: 14,
           }}>
 متصدرو الاسبوع
@@ -133,7 +133,7 @@ const Leaderboard = () => {
             <View style={styles.pointsContainer}>
               <View style={styles.pointsTextContainer}>
                 <Text style={styles.pointsText}>0</Text>
-                <Star1 size="14" color="#DC9F46" />
+                <SvgXml xml={icons[0].startw}/>
               </View>
             </View>
             <View style={styles.nameRankContainer}>
@@ -146,7 +146,7 @@ const Leaderboard = () => {
             </View>
           </View>
           {Array.from({ length: 8 }).map((_, index) => (
-            <RankRow2 key={index} name={`Saad${index + 15}`} rank={index + 1} photoSvg={svgs[0].twoo} />
+            <RankRow2 key={index} name={`Saad${index + 15}`} rank={String(index + 1)} photoSvg={svgs[0].twoo} />
           ))}
         </ScrollView>
       </View>
@@ -226,9 +226,9 @@ const styles = StyleSheet.create({
       backgroundColor: Colors.BACKGROUND_5,
     },
     pointsContainer: {
-      width: 80.5,
+      width: 85.5,
       borderRadius: 13.5,
-      paddingVertical: 5,
+      paddingVertical: 2,
       flexDirection: 'row-reverse',
       shadowColor: "black",
       shadowOpacity: 0.8,
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
       shadowOffset: { width: 0, height: 2 },
       elevation: 6,
       backgroundColor: Colors.SECONDARY_700,
-      paddingRight: 13,
+      paddingRight: 2,
     },
     pointsTextContainer: {
       flexDirection: 'row',

@@ -13,21 +13,11 @@ import fonts from "../fonts";
 import React, { useState } from "react";
 import { BlurView } from "expo-blur";
 import eagl from "../assets/Ellipse 1.png";
-import {
-  User,
-  ArrowRight2,
-  GalleryEdit,
-  Camera,
-  Trash,
-  Sms,
-  Key,
-} from "iconsax-react-native";
-import active from "../assets/active.png";
-import noactive1 from "../assets/noactive1.png";
-import noactive2 from "../assets/noactive2.png";
-import back from "../assets/back.png";
+import { ArrowRight2 } from "iconsax-react-native";
+
 import { SvgXml } from "react-native-svg";
 import { svgs } from "./svg";
+import { icons } from "./icons";
 import LinearButton from "../Components/linearButton";
 export default function MyProfil() {
   const shadow = StyleSheet.create({
@@ -45,13 +35,13 @@ export default function MyProfil() {
       elevation: 10,
     },
     text: {
-      color: "#EFB054",
+      color: Colors.PRIMARY_600,
       fontFamily: fonts.almaraiRegular,
     },
     blurContainer: {
       width: "100%",
       overflow: "hidden",
-      backgroundColor: "#262b3384",
+      backgroundColor: Colors.BACKGROUND_3,
       alignItems: "center",
       justifyContent: "center",
       borderBottomEndRadius: 24,
@@ -67,7 +57,7 @@ export default function MyProfil() {
     },
     title: {
       fontFamily: fonts.almaraiBold,
-      color: "#fff",
+      color: Colors.DEFAULT_WHITE,
       fontSize: 14,
       textAlign: "right",
     },
@@ -103,18 +93,7 @@ export default function MyProfil() {
     RedColor: {
       color: "#FF4343",
     },
-    smallOrangButton: {
-      backgroundColor: "#FFAF36",
-      width: 65,
-      height: 28,
-      justifyContent: "center",
-      alignItems: "center",
-      borderRadius: 6.25,
-      shadowColor: "#FFCF0B",
-      shadowOpacity: 0.8,
-      shadowRadius: 1,
-      elevation: 5,
-    },
+
     CardsContainer: {
       paddingHorizontal: 24,
       paddingVertical: 8,
@@ -154,17 +133,22 @@ export default function MyProfil() {
             <View
               style={{
                 flexDirection: "row",
-                backgroundColor: "#4D5666",
+                backgroundColor: Colors.BACKGROUND_5,
                 borderRadius: 16,
                 alignItems: "center",
                 padding: 12,
                 gap: 4,
               }}
             >
-              <Text style={{ color: "#262B33", fontFamily: "Almarai_Regular" }}>
+              <Text
+                style={{
+                  color: Colors.BACKGROUND_3,
+                  fontFamily: "Almarai_Regular",
+                }}
+              >
                 عودة
               </Text>
-              <ArrowRight2 size={16} color="#262B33" />
+              <ArrowRight2 size={16} color={Colors.BACKGROUND_3} />
             </View>
           </View>
         </BlurView>
@@ -213,7 +197,7 @@ export default function MyProfil() {
                       >
                         الاستديو
                       </Text>
-                      <GalleryEdit size="16" color={Colors.PRIMARY_600} />
+                      <SvgXml xml={icons[0].image} />
                     </View>
                     <View style={{ ...shadow.editsShildes, marginVertical: 8 }}>
                       <Text
@@ -221,13 +205,13 @@ export default function MyProfil() {
                       >
                         الكاميرا
                       </Text>
-                      <Camera size="16" color={Colors.PRIMARY_600} />
+                      <SvgXml xml={icons[0].cam} />
                     </View>
                     <View style={shadow.editsShildes}>
                       <Text style={{ ...shadow.fontBold, ...shadow.RedColor }}>
                         إزالة
                       </Text>
-                      <Trash size="16" color={"#FF4343"} />
+                      <SvgXml xml={icons[0].delet} />
                     </View>
                   </View>
                 </View>
@@ -256,7 +240,7 @@ export default function MyProfil() {
                     marginBottom: 8,
                   }}
                 >
-                 <LinearButton
+                  <LinearButton
                     text="شراء"
                     onPress={() => {}}
                     containerStyle={{
@@ -266,7 +250,7 @@ export default function MyProfil() {
                     linearStyle={{
                       width: 65,
                       height: 28,
-                      paddingVertical:0
+                      paddingVertical: 0,
                     }}
                   />
                   <Text style={shadow.title}>تصاميم الورق</Text>
@@ -303,17 +287,20 @@ export default function MyProfil() {
                     marginBottom: 8,
                   }}
                 >
-                  <View style={shadow.smallOrangButton}>
-                    <Text
-                      style={{
-                        color: "white",
-                        ...shadow.fontBold,
-                        fontSize: 12,
-                      }}
-                    >
-                      تأجير
-                    </Text>
-                  </View>
+                  <LinearButton
+                    text="تأجير"
+                    onPress={() => {}}
+                    containerStyle={{
+                      width: 65,
+                      height: 28,
+                    }}
+                    linearStyle={{
+                      width: 65,
+                      height: 28,
+                      paddingVertical: 0,
+                    }}
+                  />
+
                   <Text style={shadow.title}> خلفية الجلسة</Text>
                 </View>
 
@@ -363,14 +350,16 @@ export default function MyProfil() {
                   <View style={styl.inputBox}>
                     <TextInput
                       placeholder="اسم المستخدم"
+                      placeholderTextColor={"#A6ABB3"}
+                      textAlign={"right"}
                       style={{
                         fontFamily: fonts.almaraiRegular,
-                        color: "#fff",
+                        color: Colors.DEFAULT_WHITE,
                         fontSize: 16,
                         flex: 1,
                       }}
                     />
-                    <User size="24" color="#EFB054" />
+                    <SvgXml xml={icons[0].user} />
                   </View>
                   <View
                     style={{ width: "100%", marginTop: 4, marginBottom: 16 }}
@@ -378,7 +367,7 @@ export default function MyProfil() {
                     <Text
                       style={{
                         fontFamily: fonts.almaraiRegular,
-                        color: "#fff",
+                        color: Colors.DEFAULT_WHITE,
                         fontSize: 10,
                       }}
                     >
@@ -387,27 +376,34 @@ export default function MyProfil() {
                   </View>
                   <View style={styl.inputBox}>
                     <TextInput
+                      placeholderTextColor={"#A6ABB3"}
+                      textAlign={"right"}
                       placeholder="البريد الالكتروني"
                       style={{
                         fontFamily: fonts.almaraiRegular,
-                        color: "#fff",
+                        color: Colors.DEFAULT_WHITE,
                         fontSize: 16,
                         flex: 1,
                       }}
                     />
-                    <Sms size="24" color="#EFB054" />
+                    <SvgXml xml={icons[0].sms} />
                   </View>
                 </View>
-                <View style={styl.button}>
-                  <Text
-                    style={{
-                      fontFamily: fonts.almaraiRegular,
-                      color: "#fff",
-                      fontSize: 16,
+                <View style={{ marginTop: 16, width: "100%" }}>
+                  <LinearButton
+                    text="حفظ"
+                    textStyles={{ fontSize: 12, fontFamily: fonts.almaraiBold }}
+                    onPress={() => {}}
+                    containerStyle={{
+                      width: "100%",
+                      height: 40,
                     }}
-                  >
-                    حفظ
-                  </Text>
+                    linearStyle={{
+                      width: "100%",
+                      height: 40,
+                      paddingVertical: 0,
+                    }}
+                  />
                 </View>
               </View>
             </BlurView>
@@ -441,40 +437,49 @@ export default function MyProfil() {
                 <View style={styl.inputsFeild}>
                   <View style={{ ...styl.inputBox, marginBottom: 16 }}>
                     <TextInput
+                      placeholderTextColor={"#A6ABB3"}
+                      textAlign={"right"}
                       placeholder="كلمة المرور السابقة"
                       style={{
                         fontFamily: fonts.almaraiRegular,
-                        color: "#fff",
+                        color: Colors.DEFAULT_WHITE,
                         fontSize: 16,
                         flex: 1,
                       }}
                     />
-                    <Key size="24" color="#EFB054" />
+                    <SvgXml xml={icons[0].key} />
                   </View>
 
                   <View style={styl.inputBox}>
                     <TextInput
                       placeholder=" كلمة المرور الجديدة"
+                      placeholderTextColor={"#A6ABB3"}
+                      textAlign={"right"}
                       style={{
                         fontFamily: fonts.almaraiRegular,
-                        color: "#fff",
+                        color: Colors.DEFAULT_WHITE,
                         fontSize: 16,
                         flex: 1,
                       }}
                     />
-                    <Key size="24" color="#EFB054" />
+                    <SvgXml xml={icons[0].key} />
                   </View>
                 </View>
-                <View style={styl.button}>
-                  <Text
-                    style={{
-                      fontFamily: fonts.almaraiRegular,
-                      color: "#fff",
-                      fontSize: 16,
+                <View style={{ marginTop: 16, width: "100%" }}>
+                  <LinearButton
+                    text="حفظ"
+                    textStyles={{ fontSize: 12, fontFamily: fonts.almaraiBold }}
+                    onPress={() => {}}
+                    containerStyle={{
+                      width: "100%",
+                      height: 40,
                     }}
-                  >
-                    حفظ
-                  </Text>
+                    linearStyle={{
+                      width: "100%",
+                      height: 40,
+                      paddingVertical: 0,
+                    }}
+                  />
                 </View>
               </View>
             </BlurView>
@@ -497,20 +502,20 @@ const styl = StyleSheet.create({
     borderColor: "transparent",
     paddingVertical: 8,
     width: 104,
-    backgroundColor: "#39404D",
+    backgroundColor: Colors.BACKGROUND_4,
     borderRadius: 28,
     justifyContent: "center",
     alignItems: "center",
   },
   selectedTab: {
-    borderColor: "#EFB054",
+    borderColor: Colors.PRIMARY_600,
   },
   tabText: {
     color: "white",
     fontFamily: "Almarai_Regular",
   },
   selectedTabText: {
-    color: "#EFB054",
+    color: Colors.PRIMARY_600,
   },
   inputsFeild: {
     paddingHorizontal: 13.5,
@@ -526,7 +531,7 @@ const styl = StyleSheet.create({
     borderRadius: 8,
     width: "100%",
     gap: 8,
-    padding: 8,
+
     flexDirection: "row",
     justifyContent: "flex-end",
   },

@@ -4,8 +4,14 @@ import { SvgXml } from "react-native-svg";
 import { Star1 } from "iconsax-react-native";
 import fonts from "../fonts";
 import Colors from "../Colors";
+import { icons } from '../Views/icons';
 
-const RankRow = ({ name, rank, photoSvg }:any) => {
+interface RankRowProps {
+  name: string;
+  rank: string | Number;
+  photoSvg: string;
+}
+const RankRow = ({ name, rank, photoSvg }:RankRowProps) => {
   return (
     <View style={styles.rankRow}>
       <View style={styles.pointsContainer}>
@@ -13,7 +19,7 @@ const RankRow = ({ name, rank, photoSvg }:any) => {
           <Text style={{ color: 'white', fontFamily: fonts.almaraiRegular, fontSize: 11.5 }}>
             0
           </Text>
-          <Star1 size="14" color="#DC9F46" />
+          <SvgXml xml={icons[0].staro}/>
         </View>
       </View>
       <View style={styles.nameRankContainer}>
@@ -25,7 +31,7 @@ const RankRow = ({ name, rank, photoSvg }:any) => {
         </View>
         <View style={styles.verticalBar} />
         <Text style={styles.rankText}>
-          {rank}
+        {String(rank)}
         </Text>
       </View>
     </View>
@@ -44,9 +50,9 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   pointsContainer: {
-    width: 80.5,
+    width: 85.5,
     borderRadius: 13.5,
-    paddingVertical: 5,
+    paddingVertical: 2,
     flexDirection: 'row-reverse',
     shadowColor: "black",
     shadowOpacity: 0.8,
@@ -54,7 +60,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     elevation: 6,
     backgroundColor: Colors.BACKGROUND_5,
-    paddingRight: 13,
+    paddingRight: 4,
   },
   nameRankContainer: {
     flexDirection: 'row',

@@ -58,7 +58,7 @@ export default function Review() {
       },
       textCol2:{
         fontFamily: fonts.almaraiBold,
-        color: "#fff",
+        color:Colors.DEFAULT_WHITE,
         fontSize: 10,
       },
       container3:{
@@ -97,7 +97,7 @@ justifyContent: "center",
                 <Text
                   style={{
                     fontFamily: fonts.almaraiRegular,
-                    color: "#fff",
+                    color:Colors.DEFAULT_WHITE,
                     fontSize: 14,
                   }}
                 >
@@ -117,7 +117,7 @@ justifyContent: "center",
                 <Text
                   style={{
                     fontFamily: fonts.almaraiRegular,
-                    color: "#fff",
+                    color:Colors.DEFAULT_WHITE,
                     fontSize: 14,
                   }}
                 >
@@ -146,7 +146,7 @@ justifyContent: "center",
                   <Text
                     style={{
                       fontFamily: fonts.almaraiRegular,
-                      color: "#47B881",
+                      color: Colors.SUCCESS_600,
                       fontSize: 14,
                     }}
                   >
@@ -230,17 +230,17 @@ justifyContent: "center",
 </View>
 </View>
 <View style={custome.container3}>
-<Text style={{fontFamily:fonts.almaraiBold,color:'#0C9D61',fontSize:16,paddingRight:28}}>
+<Text style={{fontFamily:fonts.almaraiBold,color:Colors.SUCCESS_700,fontSize:16,paddingRight:28}}>
 النتيجة
 </Text>
 <View style={{flexDirection:'row',backgroundColor:Colors.BACKGROUND_4,borderRadius:8}}>
     <View style={{paddingHorizontal:38.5,paddingVertical:8}}>
-    <Text style={{fontFamily:fonts.almaraiBold,color:'#fff',fontSize:16}}>
+    <Text style={{fontFamily:fonts.almaraiBold,color:Colors.DEFAULT_WHITE,fontSize:16}}>
 10
 </Text>
     </View>
     <View style={{paddingHorizontal:38.5,borderLeftWidth:1,paddingVertical:8,borderLeftColor:Colors.BACKGROUND_5}}>
-    <Text style={{fontFamily:fonts.almaraiBold,color:'#fff',fontSize:16}}>
+    <Text style={{fontFamily:fonts.almaraiBold,color:Colors.DEFAULT_WHITE,fontSize:16}}>
 16
 </Text>
     </View>
@@ -249,7 +249,7 @@ justifyContent: "center",
 </View>
 <View style={custome.button}>
 <Text style={{        fontFamily: fonts.almaraiBold,
-        color: "#F2BE72",
+        color: Colors.PRIMARY_500,
         fontSize: 12,}}>
 عودة
 </Text>
